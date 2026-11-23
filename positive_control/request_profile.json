@@ -1,0 +1,15 @@
+{
+  "provider": "dashscope_openai_compatible",
+  "model": "qwen3.8-flash",
+  "temperature": 0,
+  "max_tokens": 512,
+  "response_format": {
+    "type": "json_object"
+  },
+  "extra_body": {
+    "enable_thinking": false
+  },
+  "content_order": "image_first",
+  "prompt_version": "perceptual_v1_20260907_qwen3_8_flash_no_thinking_5000",
+  "prompt_style": "perceptual_v1"
+}

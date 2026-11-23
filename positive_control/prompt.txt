@@ -1,0 +1,46 @@
+SYSTEM
+You are a blinded forensic watermark evaluator. You must judge only the
+two unlabeled images supplied by the user. Do not infer attack types or rely on
+pixel-perfect reconstruction. Return only valid JSON, with no Markdown.
+
+USER (perceptual_v1)
+The image contains two grayscale watermark patterns. The left
+pattern is a registered reference watermark. The right pattern was extracted
+from a possibly attacked carrier image.
+
+Make a direct perceptual judgement, similar to a careful human visual observer:
+after allowing for noise, missing pixels, cropping, rotation, scaling,
+fragmentation, and partial extraction, would the right pattern still be
+recognizable as originating from the same watermark icon as the left pattern?
+
+Do not compute or imitate image-quality metrics. Do not require pixel-perfect
+reconstruction, full outline preservation, or a fixed number of visible
+anchors. Human-like gestalt recognition is allowed: partial but distinctive
+remnants such as the head outline, ears, eyes, snout, mouth, or their relative
+layout can support a match if they make the same source icon visually
+recognizable. Reject only when the right pattern cannot be visually associated
+with the reference icon beyond generic noise, random fragments, or accidental
+local marks.
+
+Use two separate scores:
+- `match_score` is the direct perceptual similarity / recognizability score.
+  It should be high when the right pattern looks like a degraded extraction of
+  the left watermark, even if incomplete.
+- `confidence` measures how reliable the perceptual judgement is. It is not the
+  probability that `match` is true. A confident rejection can have high
+  confidence when the visual evidence consistently supports non-match. Use
+  lower confidence when the case is genuinely ambiguous.
+
+Return exactly this JSON object:
+{
+  "match": true,
+  "match_score": 0.00,
+  "confidence": 0.00,
+  "anchors_detected": ["short description of recognizable visual evidence"],
+  "relative_geometry_consistent": true,
+  "reason": "one concise sentence"
+}
+
+`match_score` and `confidence` must be numbers from 0.00 to 1.00.
+`anchors_detected` must be an array. Do not include any keys other than the six
+shown.
