@@ -23,3 +23,7 @@ The main perceptual assessment returned 4,573 matches among 5,000 positive tasks
 CSV and JSON files are UTF-8. Open the CSV summaries directly on GitHub or download the repository for analysis. The positive and negative experiment folders each contain a judgement table and two ZIP archives. Extract each archive inside its own experiment folder so the relative paths in the CSV resolve correctly.
 
 The repository distributes derived measurements, watermark comparison panels, and selected research scripts. For experiments on the original xBD imagery, obtain the imagery separately from its distributor. Use [SHA256SUMS](SHA256SUMS) to verify downloaded files after extracting the repository and before unpacking the nested archives.
+
+## License
+
+The project contributors release all materials in this repository under the [MIT License](LICENSE) to the extent they hold the applicable rights. This includes source code, documentation, experimental data, model-response records, watermark comparison panels, and figures, including files distributed in archives. Third-party materials, including the original xBD imagery, remain subject to their respective terms.
