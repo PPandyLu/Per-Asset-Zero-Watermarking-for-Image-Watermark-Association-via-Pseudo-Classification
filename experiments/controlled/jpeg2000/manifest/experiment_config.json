@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-09-14T09:48:30.993805+00:00",
+  "seed": 20260911,
+  "condition": "jpeg2000",
+  "parameter_name": "compression_ratio",
+  "levels": [
+    {
+      "name": "cr_05",
+      "value": 5.0
+    },
+    {
+      "name": "cr_10",
+      "value": 10.0
+    },
+    {
+      "name": "cr_20",
+      "value": 20.0
+    },
+    {
+      "name": "cr_40",
+      "value": 40.0
+    },
+    {
+      "name": "cr_80",
+      "value": 80.0
+    }
+  ],
+  "cohort_size": 100,
+  "task_count": 500,
+  "method": "single controlled global operation; source RF models and registered watermarks reused read-only"
+}

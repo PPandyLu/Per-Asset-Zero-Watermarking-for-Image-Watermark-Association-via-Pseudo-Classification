@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-09-14T09:48:22.818245+00:00",
+  "seed": 20260911,
+  "condition": "jpeg",
+  "parameter_name": "quality_factor",
+  "levels": [
+    {
+      "name": "qf_90",
+      "value": 90.0
+    },
+    {
+      "name": "qf_70",
+      "value": 70.0
+    },
+    {
+      "name": "qf_50",
+      "value": 50.0
+    },
+    {
+      "name": "qf_30",
+      "value": 30.0
+    },
+    {
+      "name": "qf_10",
+      "value": 10.0
+    }
+  ],
+  "cohort_size": 100,
+  "task_count": 500,
+  "method": "single controlled global operation; source RF models and registered watermarks reused read-only"
+}

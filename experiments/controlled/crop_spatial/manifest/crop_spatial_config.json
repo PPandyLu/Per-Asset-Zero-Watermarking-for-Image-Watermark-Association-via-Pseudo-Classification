@@ -1,0 +1,22 @@
+{
+  "created_at_utc": "2026-09-10T05:31:46.933799+00:00",
+  "seed": 20260910,
+  "cohort_size": 100,
+  "retain_percents": [
+    90,
+    70,
+    60,
+    50,
+    30
+  ],
+  "anchors": [
+    "top_left",
+    "top_right",
+    "center",
+    "bottom_left",
+    "bottom_right"
+  ],
+  "anchor_span_fraction_of_available_offset": 0.15,
+  "task_count": 2500,
+  "method": "fixed retained area with anchor-conditioned random crop windows; source models are reused read-only"
+}

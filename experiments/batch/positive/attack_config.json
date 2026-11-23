@@ -1,0 +1,299 @@
+{
+  "seed": 20260829,
+  "assets": 200,
+  "chains_per_asset": 25,
+  "chain_length_counts": {
+    "1": 15,
+    "2": 6,
+    "3": 3,
+    "4": 1
+  },
+  "total_chains": 5000,
+  "total_operations": 8000,
+  "family_operation_counts": {
+    "compression": 762,
+    "crop": 846,
+    "gaussian_filter": 794,
+    "gaussian_noise": 784,
+    "mean_filter": 818,
+    "median_filter": 792,
+    "rotation": 806,
+    "salt_pepper_noise": 832,
+    "scale": 745,
+    "speckle_noise": 821
+  },
+  "strength_weights": {
+    "light": 0.55,
+    "moderate": 0.3,
+    "severe": 0.15
+  },
+  "family_order": {
+    "rotation": 0,
+    "scale": 0,
+    "crop": 0,
+    "mean_filter": 1,
+    "median_filter": 1,
+    "gaussian_filter": 1,
+    "gaussian_noise": 2,
+    "speckle_noise": 2,
+    "salt_pepper_noise": 2,
+    "compression": 3
+  },
+  "parameter_sets": {
+    "rotation": {
+      "light": [
+        {
+          "angle": 15
+        }
+      ],
+      "moderate": [
+        {
+          "angle": 45
+        },
+        {
+          "angle": 90
+        }
+      ],
+      "severe": [
+        {
+          "angle": 135
+        },
+        {
+          "angle": 180
+        },
+        {
+          "angle": 270
+        }
+      ]
+    },
+    "scale": {
+      "light": [
+        {
+          "factor": 0.75
+        },
+        {
+          "factor": 1.25
+        }
+      ],
+      "moderate": [
+        {
+          "factor": 0.5
+        },
+        {
+          "factor": 1.5
+        }
+      ],
+      "severe": [
+        {
+          "factor": 0.3
+        },
+        {
+          "factor": 2.0
+        }
+      ]
+    },
+    "crop": {
+      "light": [
+        {
+          "retain_percent": 90
+        }
+      ],
+      "moderate": [
+        {
+          "retain_percent": 70
+        }
+      ],
+      "severe": [
+        {
+          "retain_percent": 50
+        },
+        {
+          "retain_percent": 30
+        }
+      ]
+    },
+    "mean_filter": {
+      "light": [
+        {
+          "kernel": 3
+        }
+      ],
+      "moderate": [
+        {
+          "kernel": 7
+        }
+      ],
+      "severe": [
+        {
+          "kernel": 11
+        },
+        {
+          "kernel": 15
+        },
+        {
+          "kernel": 19
+        }
+      ]
+    },
+    "median_filter": {
+      "light": [
+        {
+          "kernel": 3
+        }
+      ],
+      "moderate": [
+        {
+          "kernel": 7
+        }
+      ],
+      "severe": [
+        {
+          "kernel": 11
+        },
+        {
+          "kernel": 15
+        },
+        {
+          "kernel": 19
+        }
+      ]
+    },
+    "gaussian_filter": {
+      "light": [
+        {
+          "kernel": 3
+        }
+      ],
+      "moderate": [
+        {
+          "kernel": 7
+        }
+      ],
+      "severe": [
+        {
+          "kernel": 11
+        },
+        {
+          "kernel": 15
+        },
+        {
+          "kernel": 19
+        }
+      ]
+    },
+    "gaussian_noise": {
+      "light": [
+        {
+          "sigma": 5
+        }
+      ],
+      "moderate": [
+        {
+          "sigma": 15
+        }
+      ],
+      "severe": [
+        {
+          "sigma": 30
+        },
+        {
+          "sigma": 50
+        }
+      ]
+    },
+    "speckle_noise": {
+      "light": [
+        {
+          "sigma": 0.05
+        }
+      ],
+      "moderate": [
+        {
+          "sigma": 0.1
+        }
+      ],
+      "severe": [
+        {
+          "sigma": 0.2
+        },
+        {
+          "sigma": 0.3
+        },
+        {
+          "sigma": 0.5
+        }
+      ]
+    },
+    "salt_pepper_noise": {
+      "light": [
+        {
+          "density": 0.01
+        }
+      ],
+      "moderate": [
+        {
+          "density": 0.03
+        },
+        {
+          "density": 0.05
+        }
+      ],
+      "severe": [
+        {
+          "density": 0.08
+        },
+        {
+          "density": 0.1
+        }
+      ]
+    },
+    "compression": {
+      "light": [
+        {
+          "codec": "jpeg",
+          "quality_factor": 90
+        },
+        {
+          "codec": "jpeg2000",
+          "compression_ratio": 5
+        }
+      ],
+      "moderate": [
+        {
+          "codec": "jpeg",
+          "quality_factor": 70
+        },
+        {
+          "codec": "jpeg2000",
+          "compression_ratio": 10
+        }
+      ],
+      "severe": [
+        {
+          "codec": "jpeg",
+          "quality_factor": 50
+        },
+        {
+          "codec": "jpeg",
+          "quality_factor": 30
+        },
+        {
+          "codec": "jpeg",
+          "quality_factor": 10
+        },
+        {
+          "codec": "jpeg2000",
+          "compression_ratio": 20
+        },
+        {
+          "codec": "jpeg2000",
+          "compression_ratio": 40
+        },
+        {
+          "codec": "jpeg2000",
+          "compression_ratio": 80
+        }
+      ]
+    }
+  }
+}

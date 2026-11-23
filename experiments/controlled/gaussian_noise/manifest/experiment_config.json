@@ -1,0 +1,27 @@
+{
+  "created_at_utc": "2026-09-14T09:36:31.571728+00:00",
+  "seed": 20260911,
+  "condition": "gaussian_noise",
+  "parameter_name": "sigma",
+  "levels": [
+    {
+      "name": "sigma_05",
+      "value": 5.0
+    },
+    {
+      "name": "sigma_15",
+      "value": 15.0
+    },
+    {
+      "name": "sigma_30",
+      "value": 30.0
+    },
+    {
+      "name": "sigma_50",
+      "value": 50.0
+    }
+  ],
+  "cohort_size": 100,
+  "task_count": 400,
+  "method": "single controlled global operation; source RF models and registered watermarks reused read-only"
+}

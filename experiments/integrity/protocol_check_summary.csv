@@ -1,0 +1,8 @@
+scenario_code,scenario,n,expected_status,expected_matches,unexpected,observed_statuses,models_deserialized
+C0,correct_control,20,ACCEPT,20,0,ACCEPT,20
+C1,unknown_registration_id,20,REJECT_UNKNOWN_REGISTRATION,20,0,REJECT_UNKNOWN_REGISTRATION,0
+C2,model_swap,20,REJECT_MODEL_HASH,20,0,REJECT_MODEL_HASH,0
+C3,model_byte_tamper,20,REJECT_MODEL_HASH,20,0,REJECT_MODEL_HASH,0
+C4,reference_watermark_tamper,20,REJECT_WATERMARK_HASH,20,0,REJECT_WATERMARK_HASH,0
+C5,registration_record_tamper,20,REJECT_SIGNATURE,20,0,REJECT_SIGNATURE,0
+C6,duplicate_registration_id_conflicting_binding,20,REJECT_REGISTRATION_ID_CONFLICT,20,0,REJECT_REGISTRATION_ID_CONFLICT,0

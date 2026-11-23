@@ -1,0 +1,5 @@
+cohort,interpretation,group,n,successes,failures,success_rate,wilson_95_low,wilson_95_high
+positive,TPR,positive: TPR (match=True),5000,4573,427,0.9146,0.9065316087728363,0.9220318127743223
+positive,FRR,positive: FRR (match=False),5000,427,4573,0.0854,0.07796818722567767,0.09346839122716372
+negative,TNR,negative: TNR (match=False),3000,2837,163,0.9456666666666667,0.9369706177287046,0.9532228351074549
+negative,FAR,negative: FAR (match=True),3000,163,2837,0.05433333333333333,0.046777164892545124,0.06302938227129541

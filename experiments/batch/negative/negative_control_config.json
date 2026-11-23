@@ -1,0 +1,27 @@
+{
+  "created_at_utc": "2026-09-09T04:37:32.567428+00:00",
+  "random_seed": 20260909,
+  "cohort": "negative_control_500",
+  "target_asset_count": 500,
+  "pairs_per_target": 6,
+  "total_expected_non_match_pairs": 3000,
+  "pairing_counts": {
+    "cross_event_attacked": 1000,
+    "same_event_attacked": 1000,
+    "same_event_clean": 1000
+  },
+  "attacked_chain_length_counts": {
+    "1": 1200,
+    "2": 480,
+    "3": 240,
+    "4": 80
+  },
+  "quality_rules": {
+    "minimum_width_height": 100,
+    "minimum_grayscale_stddev": 10.0,
+    "minimum_grayscale_entropy_bits": 4.0,
+    "maximum_pure_black_fraction": 0.1,
+    "maximum_pure_white_fraction": 0.1
+  },
+  "manual_review_required": true
+}

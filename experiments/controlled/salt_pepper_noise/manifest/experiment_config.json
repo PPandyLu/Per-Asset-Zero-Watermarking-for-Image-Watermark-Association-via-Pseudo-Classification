@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-09-11T08:06:57.728589+00:00",
+  "seed": 20260911,
+  "condition": "salt_pepper_noise",
+  "parameter_name": "density",
+  "levels": [
+    {
+      "name": "density_0.01",
+      "value": 0.01
+    },
+    {
+      "name": "density_0.03",
+      "value": 0.03
+    },
+    {
+      "name": "density_0.05",
+      "value": 0.05
+    },
+    {
+      "name": "density_0.08",
+      "value": 0.08
+    },
+    {
+      "name": "density_0.10",
+      "value": 0.1
+    }
+  ],
+  "cohort_size": 100,
+  "task_count": 500,
+  "method": "single controlled global operation; source RF models and registered watermarks reused read-only"
+}

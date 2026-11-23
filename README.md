@@ -1,33 +1,25 @@
 # Per-Asset Zero-Watermarking for Image–Watermark Association via Pseudo-Classification
 
-This data collection covers the 5,000-task positive-control perceptual assessment and the four objective-metric ROC curves in Figure 7. The ROC analysis includes both positive and negative examples in the primary held-out split.
+Research data and analysis code accompanying the article by Junyan Lu, Guoqing Li, Long Zhao and Lianchong Zhang. The experiments measure whether a registered key reconstructs a reference watermark from a candidate remote sensing image.
 
-## Positive-control assessment
+## Explore the results
 
-Open `positive_control/judgements.csv` for one row per task. There are 200 registered assets and 5,000 tasks. The frozen assessment classified 4,573 tasks as matches and 427 as non-matches (91.46% match rate). The `match` column is the model decision. The `confidence` and `match_score` fields describe the model response.
-
-Extract both ZIP files **inside `positive_control/`**. Each archive already contains its top-level directory. The two relative paths in each CSV row then open the corresponding PNG comparison panel and JSON record. The filenames use the same task ID. Each panel pairs a reference watermark on the left with the reconstructed watermark on the right.
-
-| File | Contents |
+| Question | Start here |
 |---|---|
-| `judgements.csv` | Task and asset IDs, attack labels, model decision, model scores, explanation, timing and relative file paths. |
-| `panels.zip` | 5,000 original PNG panels in `panels/`. |
-| `responses.zip` | 5,000 JSON records in `responses/`. Each contains the manifest row, model response and inference settings. |
-| `prompt.txt` | Assessment instructions transcribed from Supplementary Material S1. |
-| `request_profile.json` | Inference settings common to all 5,000 tasks. |
+| How often did the perceptual assessment return a match? | [Decision rates and confidence intervals](figures/stratified_statistics/overall_decision_rates.csv) · [Positive and negative task records](experiments/batch/) |
+| How well did an objective metric separate the two cohorts? | [ROC curves and AUCs](figures/roc/) · [Ten calibration/evaluation splits](experiments/screening/) |
+| What happened as cropping, noise, filtering or compression increased? | [Controlled measurements and summary scripts](experiments/controlled/) |
+| Where did the model and human panel disagree? | [Collective blind-review labels and images](experiments/blind_review/) |
+| Did the integrity checks behave as expected? | [140 protocol checks](experiments/integrity/protocol_check_results.csv) |
+| What did preprocessing cost at each image size? | [Benchmark setup and timings](experiments/runtime/) |
+| How do I register a key and run an extraction? | [Method code and input layout](method/) |
 
-The JSON files are publication copies. Provider request IDs, the API-key environment variable name, the service endpoint and the run directory were removed. Panel paths are relative to this collection. Scientific response content, scores and timestamps are retained. The PNG files are byte-identical to the archived experiment panels.
+The main perceptual assessment returned 4,573 matches among 5,000 positive tasks and 163 matches among 3,000 negative tasks. These decisions come from the frozen model and prompt. The objective screen uses centered NCC. The human assessment records a separate three-level collective judgement.
 
-## Figure 7
+**Browse by paper figure:** [Figures 22–28, with plots and source tables](figures/README.md). Figures are numbered as in the final manuscript.
 
-| File in `figure_7/` | Contents |
-|---|---|
-| `auc_summary.csv` | Original four-row figure summary, with held-out sample size and AUC for each metric. |
-| `held_out_scores.csv` | The 6,344 held-out task rows, including asset group, event, binary ground truth and the four metric values. Multiple rows per asset are expected. |
-| `roc_points.csv` | False-positive and true-positive rates in curve order, grouped by metric. Plot the two columns against each other to draw each ROC curve. |
+## Working with the files
 
-The primary split uses seed `objective_rule_repeat_0`. Within each event, distinct asset IDs are ordered by the SHA-256 digest of `seed|event|asset`. The first 20% (rounded up) are reserved for calibration and the remaining assets are held out. Label 1 denotes a positive task. Rank centered NCC, masked SSIM and IoU from highest to lowest, and BER from lowest to highest. Advance the curve once for each tied-score group. Trapezoidal integration reproduces all four AUCs in the original figure summary to within 1e-12. These are single-split results; the paper also reports a median across ten splits.
+CSV and JSON files are UTF-8. Open the CSV summaries directly on GitHub or download the repository for analysis. The positive and negative experiment folders each contain a judgement table and two ZIP archives. Extract each archive inside its own experiment folder so the relative paths in the CSV resolve correctly.
 
-## File integrity
-
-`SHA256SUMS` contains SHA-256 digests for the data files and this README. The CSV files use UTF-8. No credentials are needed to inspect the archived data.
+The repository distributes derived measurements, watermark comparison panels, and selected research scripts. For experiments on the original xBD imagery, obtain the imagery separately from its distributor. Use [SHA256SUMS](SHA256SUMS) to verify downloaded files after extracting the repository and before unpacking the nested archives.

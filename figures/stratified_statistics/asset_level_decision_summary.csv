@@ -1,0 +1,3 @@
+cohort,asset_key,assets,trials_per_asset_min,trials_per_asset_max,mean_asset_success_rate,median_asset_success_rate,asset_success_rate_min,asset_success_rate_max
+positive,asset_id,200,25,25,0.9146,0.92,0.32,1.0
+negative,target_asset_id,500,6,6,0.9456666666666667,1.0,0.5,1.0

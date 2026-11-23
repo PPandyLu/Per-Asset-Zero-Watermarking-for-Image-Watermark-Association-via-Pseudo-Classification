@@ -1,0 +1,9 @@
+source_group,task_id,asset_id
+negative_false_alarm,neg-0f8e429d8fa40ac5,xbd-negative-hold-socal-fire_00000902
+negative_false_alarm,neg-666a6e15586cd22b,xbd-negative-hold-santa-rosa-wildfire_00000195
+negative_false_alarm,neg-a0e809592abae416,xbd-negative-hold-midwest-flooding_00000307
+negative_false_alarm,neg-de838631127991dc,xbd-negative-hold-socal-fire_00000291
+negative_false_alarm,neg-feeb0a699a7ab647,xbd-negative-hold-hurricane-florence_00000071
+negative_false_alarm,neg-be0a3fca74ea28e2,xbd-negative-hold-palu-tsunami_00000014
+negative_false_alarm,neg-1c76e450baa686ac,xbd-negative-test-hurricane-michael_00000123
+positive_configuration_disagreement,task-61470d44721c2b54,xbd-test-hurricane-harvey_00000018_pre_disaster

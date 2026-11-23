@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-09-14T09:55:24.373907+00:00",
+  "seed": 20260911,
+  "condition": "median_filter",
+  "parameter_name": "kernel_size",
+  "levels": [
+    {
+      "name": "kernel_03",
+      "value": 3.0
+    },
+    {
+      "name": "kernel_07",
+      "value": 7.0
+    },
+    {
+      "name": "kernel_11",
+      "value": 11.0
+    },
+    {
+      "name": "kernel_15",
+      "value": 15.0
+    },
+    {
+      "name": "kernel_19",
+      "value": 19.0
+    }
+  ],
+  "cohort_size": 100,
+  "task_count": 500,
+  "method": "single controlled global operation; source RF models and registered watermarks reused read-only"
+}

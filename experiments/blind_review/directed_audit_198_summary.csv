@@ -1,0 +1,5 @@
+source_group,collective_label,count
+negative_false_alarm,non-match,163
+positive_configuration_disagreement,match,29
+positive_configuration_disagreement,non-match,2
+positive_configuration_disagreement,uncertain,4
